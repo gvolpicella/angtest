@@ -1,0 +1,16 @@
+
+<!-- File: chapter2/module-example.html -->
+<!DOCTYPE html>
+<html>
+	<head><title>AngularJS - Modules</title></head>
+	<body ng-app="notesApp">
+
+		<input type="text" ng-model="name" placeholder="Enter your name">
+		<h1>Hello {{name}}</h1> <!-- <span ng-bind="name"></span> -->
+
+		<script src="../angular.min.js"></script>
+		<script>
+			angular.module('notesApp', []);
+		</script>
+    </body>
+</html>

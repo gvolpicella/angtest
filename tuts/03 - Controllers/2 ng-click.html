@@ -1,0 +1,28 @@
+
+<!-- File: chapter2/controller-click-message.html -->
+<!DOCTYPE html>
+<html>
+	<head><title>AngularJS - Controllers</title></head>
+	<body ng-app="notesApp" ng-controller="MainCtrl as ctrl">
+
+		<h1><span ng-bind="ctrl.message"></span> Angular.</h1>
+
+		<button ng-click="ctrl.changeMessage()">
+			Change Message
+		</button>
+
+		<script src="../angular.min.js"></script>
+		<script>
+			angular.module('notesApp', [])
+				.controller('MainCtrl', [function(){
+					var self = this;
+          			self.message = 'Hello';
+          			self.changeMessage = function() {
+          				if (self.message === 'Hello') {
+          					self.message = 'Goodbye';
+         				} else self.message = 'Hello';
+          			};         			
+				}]);
+		</script>
+    </body>
+</html>
